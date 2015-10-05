@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project( ImageD )
+find_package( OpenCV REQUIRED )
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") 
+INCLUDE_DIRECTORIES ( "/usr/local/include" )
+INCLUDE_DIRECTORIES ( "/usr/local/include/eigen3" )
+add_executable( ImageD camera-models.cpp TestMain.cpp )
+target_link_libraries( ImageD ${OpenCV_LIBS} )
